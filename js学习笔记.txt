@@ -1,0 +1,139 @@
+案例：
+
+#################################################
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+	
+<h1>我的第一段 JavaScript</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input id="demo" type="text">
+<script>
+function myFunction()
+{
+	var x=document.getElementById("demo").value;
+	if(x==""||isNaN(x))
+	{
+		alert("不是数字");
+	}
+}
+</script>
+<button type="button" onclick="myFunction()">点击这里</button>
+	
+</body>
+</html>
+
+#################################################
+
+onclick="alert('欢迎!')"
+
+#######################  JavaScript 用法  ##########################
+
+x=document.getElementById("demo");  // 找到元素
+x.innerHTML="Hello JavaScript!";    // 改变内容
+
+您会经常看到 document.getElementById("some id")。这个方法是 HTML DOM 中定义的。
+DOM (Document Object Model)（文档对象模型）是用于访问 HTML 元素的正式 W3C 标准。
+
+#################################################
+
+element=document.getElementById('myimage')
+
+	if (element.src.match("bulbon"))
+ 	{
+  		element.src="/images/pic_bulboff.gif";
+  	}
+	else
+   {
+  		element.src="/images/pic_bulbon.gif";
+   }
+
+#################################################
+
+x=document.getElementById("demo") // 找到元素
+	x.style.color="#ff0000";          // 改变样式
+
+#################################################
+
+在 <head> 或者 <body> 的JavaScript
+您可以在 HTML 文档中放入不限数量的脚本。
+脚本可位于 HTML 的 <body> 或 <head> 部分中，或者同时存在于两个部分中。
+通常的做法是把函数放入 <head> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。
+
+#################################################
+
+外部的 JavaScript
+
+外部 JavaScript 文件的文件扩展名是 .js。
+如需使用外部文件，请在 <script> 标签的 "src" 属性中设置该 .js 文件：
+
+<!DOCTYPE html>
+<html>
+<body>
+<script src="myScript.js"></script>
+</body>
+</html>
+
+##########################  JavaScript 输出   #######################
+
+JavaScript 显示数据
+JavaScript 可以通过不同的方式来输出数据：
+使用 window.alert() 弹出警告框。
+使用 document.write() 方法将内容写到 HTML 文档中。
+使用 innerHTML 写入到 HTML 元素。
+使用 console.log() 写入到浏览器的控制台。
+
+请使用 document.write() 仅仅向文档输出写内容。
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+
+
+##########################  JavaScript 语法   #######################
+
+JavaScript 变量
+在编程语言中，变量用于存储数据值。
+JavaScript 使用关键字 var 来定义变量， 使用等号来为变量赋值
+
+JavaScript 数据类型
+JavaScript 有多种数据类型：数字，字符串，数组，对象等等：
+
+var length = 16;                                  // Number 通过数字字面量赋值 
+var points = x * 10;                              // Number 通过表达式字面量赋值
+var lastName = "Johnson";                         // String 通过字符串字面量赋值
+var cars = ["Saab", "Volvo", "BMW"];              // Array  通过数组字面量赋值
+var person = {firstName:"John", lastName:"Doe"};  // Object 通过对象字面量赋值
+
+JavaScript 字母大小写
+JavaScript 对大小写是敏感的。
+
+
+##########################  JavaScript 语句   #######################
+
+Undefined 和 Null
+Undefined 这个值表示变量不含有值。
+可以通过将变量的值设置为 null 来清空变量。
+
+声明变量类型
+当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+var carname=new String;
+var x=      new Number;
+var y=      new Boolean;
+var cars=   new Array;
+var person= new Object;
+
+
+##########################  JavaScript 函数   #######################
+
+JavaScript 变量的生存期
+
+JavaScript 变量的生命期从它们被声明的时间开始。
+局部变量会在函数运行以后被删除。
+全局变量会在页面关闭后被删除。
+
+向未声明的 JavaScript 变量分配值
+如果您把值赋给尚未声明的变量（没有使用 var 关键字），该变量将被自动作为全局变量声明。
+
