@@ -53,6 +53,9 @@ element=document.getElementById('myimage')
   		element.src="/images/pic_bulbon.gif";
    }
 
+
+☆☆☆  if(a)中，如果a为null或者undefined，是跟0一样的情况，都不走，其余情况都是进入方法体中的。
+
 #################################################
 
 x=document.getElementById("demo") // 找到元素
@@ -137,3 +140,278 @@ JavaScript 变量的生命期从它们被声明的时间开始。
 向未声明的 JavaScript 变量分配值
 如果您把值赋给尚未声明的变量（没有使用 var 关键字），该变量将被自动作为全局变量声明。
 
+
+##########################  JavaScript 事件   #######################
+
+HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 元素。
+
+例如修改其他组件：
+<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button>
+
+或者修改自身：
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>
+
+通过事件属性来调用：
+<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button onclick="displayDate()">点这里</button>
+<script>
+function displayDate(){
+	document.getElementById("demo").innerHTML=Date();
+}
+</script>
+<p id="demo"></p>
+
+
+##########################  JavaScript 字符串   #######################
+
+1、可以使用索引位置来访问字符串中的每个字符
+var character = carname[7];
+
+2、字符串添加转义字符来使用引号
+var x = 'It\'s alright';
+var y = "He is called \"Johnny\"";
+
+3、使用内置属性 length 来计算字符串的长度
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+##########################  JavaScript 比较 和 逻辑运算符   #######################
+
+1、===	绝对等于（值和类型均相等）
+2、!==	不绝对等于（值和类型有一个不相等，或两个都不相等）
+
+For/In 循环
+JavaScript for/in 语句循环遍历对象的属性：
+
+var person={fname:"John",lname:"Doe",age:25}; 
+ 
+for (x in person)  // x 为属性名
+{
+    txt=txt + person[x];
+}
+
+
+##########################  JavaScript typeof, null, 和 undefined #######################
+
+typeof 操作符
+你可以使用 typeof 操作符来检测变量的数据类型。
+typeof "John"                // 返回 string 
+typeof 3.14                  // 返回 number
+typeof false                 // 返回 boolean
+typeof [1,2,3,4]             // 返回 object
+typeof {name:'John', age:34} // 返回 object
+
+null
+在 JavaScript 中 null 表示 "什么都没有"。
+null是一个只有一个值的特殊类型。表示一个空对象引用。
+用 typeof 检测 null 返回是object。
+
+undefined
+在 JavaScript 中, undefined 是一个没有设置值的变量。
+typeof 一个没有值的变量会返回 undefined。
+你可以设置为 undefined 来清空对象
+
+undefined 和 null 的区别：
+null 和 undefined 的值相等，但类型不等：
+typeof undefined             // undefined
+typeof null                  // object
+null === undefined           // false
+null == undefined            // true
+
+
+##########################  JavaScript 类型转换   #######################
+
+JavaScript 数据类型
+在 JavaScript 中有 5 种不同的数据类型：
+string
+number
+boolean
+object
+function
+
+3 种对象类型：
+Object
+Date
+Array
+
+2 个不包含任何值的数据类型：
+null
+undefined
+
+typeof 操作符
+你可以使用 typeof 操作符来查看 JavaScript 变量的数据类型。
+
+typeof "John"                 // 返回 string 
+typeof 3.14                   // 返回 number
+typeof NaN                    // 返回 number
+typeof false                  // 返回 boolean
+typeof [1,2,3,4]              // 返回 object
+typeof {name:'John', age:34}  // 返回 object
+typeof new Date()             // 返回 object
+typeof function () {}         // 返回 function
+typeof myCar                  // 返回 undefined (如果 myCar 没有声明)
+typeof null                   // 返回 object
+
+请注意：
+NaN 的数据类型是 number
+数组(Array)的数据类型是 object
+日期(Date)的数据类型为 object
+null 的数据类型是 object
+未定义变量的数据类型为 undefined
+如果对象是 JavaScript Array 或 JavaScript Date ，我们就无法通过 typeof 来判断他们的类型，因为都是 返回 Object。
+
+constructor 属性
+constructor 属性返回所有 JavaScript 变量的构造函数。
+
+"John".constructor                 // 返回函数 String()  { [native code] }
+(3.14).constructor                 // 返回函数 Number()  { [native code] }
+false.constructor                  // 返回函数 Boolean() { [native code] }
+[1,2,3,4].constructor              // 返回函数 Array()   { [native code] }
+{name:'John', age:34}.constructor  // 返回函数 Object()  { [native code] }
+new Date().constructor             // 返回函数 Date()    { [native code] }
+function () {}.constructor         // 返回函数 Function(){ [native code] }
+
+你可以使用 constructor 属性来查看对象是否为数组 (包含字符串 "Array"):
+
+function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+}
+
+将数字转换为字符串
+全局方法 String() 可以将数字转换为字符串。
+该方法可用于任何类型的数字，字母，变量，表达式：
+
+String(x)         // 将变量 x 转换为字符串并返回
+String(123)       // 将数字 123 转换为字符串并返回
+String(100 + 23)  // 将数字表达式转换为字符串并返回
+
+Number 方法 toString() 也是有同样的效果。
+
+x.toString()
+(123).toString()
+(100 + 23).toString()
+
+将字符串转换为数字
+全局方法 Number() 可以将字符串转换为数字。
+字符串包含数字(如 "3.14") 转换为数字 (如 3.14).
+空字符串转换为 0。
+其他的字符串会转换为 NaN (不是个数字)。
+
+Number("3.14")    // 返回 3.14
+Number(" ")       // 返回 0 
+Number("")        // 返回 0
+Number("99 88")   // 返回 NaN
+
+一元运算符 +
+Operator + 可用于将变量转换为数字：
+var y = "5";      // y 是一个字符串
+var x = + y;      // x 是一个数字
+
+如果变量不能转换，它仍然会是一个数字，但值为 NaN (不是一个数字):
+var y = "John";   // y 是一个字符串
+var x = + y;      // x 是一个数字 (NaN)
+
+将布尔值转换为数字
+全局方法 Number() 可将布尔值转换为数字。
+Number(false)     // 返回 0
+Number(true)      // 返回 1
+
+自动转换类型
+当 JavaScript 尝试操作一个 "错误" 的数据类型时，会自动转换为 "正确" 的数据类型。
+以下输出结果不是你所期望的：
+5 + null    // 返回 5         null 转换为 0
+"5" + null  // 返回"5null"   null 转换为 "null"
+"5" + 1     // 返回 "51"      1 转换为 "1"  
+"5" - 1     // 返回 4         "5" 转换为 5
+
+
+##########################  JavaScript 使用误区   #######################
+
+if 条件语句返回 false (不是我们预期的)因为条件语句执行为 x 赋值 0，0 为 false:
+var x = 0;
+if (x = 0)
+
+switch 语句会使用恒等计算符(===)进行比较
+
+浮点型数据使用注意事项
+JavaScript 中的所有数据都是以 64 位浮点型数据(float) 来存储。
+所有的编程语言，包括 JavaScript，对浮点型数据的精确度都很难确定：
+var x = 0.1;
+var y = 0.2;
+var z = x + y            // z 的结果为 0.3
+if (z == 0.3)            // 返回 false
+
+JavaScript 字符串分行
+JavaScript 允许我们在字符串中使用断行语句:
+var x =
+"Hello World!";
+
+但是，在字符串中直接使用回车换行是会报错的：
+var x = "Hello
+World!";
+
+如果我们想测试对象是否存在，正确的方式是我们需要先使用 typeof 来检测对象是否已定义：
+if (typeof myObj !== "undefined" && myObj !== null) 
+
+JavaScript 验证输入的数字：
+// 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 
+if (isNaN(x) || x < 1 || x > 10) {
+    text = "输入错误";
+} else {
+    text = "输入正确";
+}
+
+
+var myFunction = function (a, b) {return a * b}
+var x = myFunction(4, 3);
+在 JavaScript 中，很多时候，你需要避免使用 new 关键字。
+
+
+##########################  JavaScript 函数参数   #######################
+
+Arguments 对象
+JavaScript 函数有个内置的对象 arguments 对象。
+argument 对象包含了函数调用的参数数组。
+
+x = findMax(1, 123, 500, 115, 44, 88);
+ 
+function findMax() {
+    var i, max = arguments[0];
+    
+    if(arguments.length < 2) return max;
+ 
+    for (i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+
+
+NaN - 非数字值
+NaN 属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。
+你可以使用 isNaN() 全局函数来判断一个值是否是 NaN 值。
+
+
+
+
+================================================     小程序     ==============================================
+
+类型值：
+let、const、
+
+方法：
+forEach、
+
+js中 => 的含义
+
+=>是es6语法中的arrow function
+
+(x) => {x + 6}
+
+相当于
+
+function(x){
+    return x + 6;
+};
