@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="../css/ydui.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/time_css.css">
+    <style>
+        body{
+            background: url(../images/countdown_bg@3x.png) no-repeat center center fixed;
+            text-align: center;
+            height:100%;
+            overflow: hidden;
+        }
+        .repair_btn{
+            display:inline-block;
+            text-align: center;
+            line-height:30px;
+            margin-top: 25px;
+            padding:0 .6rem;
+            letter-spacing: .02rem;
+            color:#f19645;
+            background: #fff;
+            font-size:12px;
+        }
+        .opendoor_info{
+            margin-top:.9rem;
+        }
+        .opendoor_info p{
+            padding:.2rem .5rem 0 .5rem;
+            color:#fff;
+            font-size: 14px;
+            line-height:1.1rem;
+            text-align: left;
+        }
+        .phone{
+            width:100%;
+            position: absolute;
+            bottom:2rem;
+            left:0;
+            text-align: center;
+            font-size: 14px;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div class="game_time">
+
+    <div class="hold">
+        <div class="pie pie1"></div>
+    </div>
+
+    <div class="hold">
+        <div class="pie pie2"></div>
+    </div>
+
+    <div class="bg"> </div>
+
+    <div class="time"></div>
+
+</div>
+<div style="text-align: center">
+    <a class="repair_btn" href="javascript:void(0)">无法打开?</a>
+</div>
+<div class="opendoor_info">
+    <p>
+        请尽量在规定时间内，选好您中意的书籍；
+    </p>
+    <p>
+        选好书后请关闭电子门，确认电子门已关紧，以方便他人借阅书籍；
+    </p>
+    <p>
+        每次借阅请勿超过三本；多出部分会加收超额费用；
+    </p>
+    <p>
+        请爱护您借阅的图书，请勿破坏，涂抹图书；
+    </p>
+</div>
+<div class="phone">
+    客服电话：021-58392983
+</div>
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/time_js.js"></script>
+<script>
+    countDown();
+</script>
+</body>
+</html>

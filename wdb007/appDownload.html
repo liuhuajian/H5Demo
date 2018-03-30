@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>app下载页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="icon" href="images/wechat_icon_2.png">
+    <link rel="stylesheet" href="css/ydui.css?rev=@@hash" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/wechat_share.css" />
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <div class="g-scrollview">
+            <div class="share-head">
+                <img class="logo-img" src="images/wechat_icon_2.png" alt="">
+                <span class="logo-name">我的邦童书馆</span>
+                <a href="javascript:void(0)" class="code-container">
+                    <img src="images/_nor.png" alt="">
+                </a>
+                <img class="wechat-img" src="images/wechat_code.jpg" alt="">
+            </div>
+            <div class="share-txt">
+                <p>我的邦</p>
+                <p>智慧童书平台</p>
+            </div>
+            <div class="hand-img">
+                <img src="images/hand_2@2x.png" alt="">
+            </div>
+            <div class="down-btn">
+                <a href="https://img.wdb007.com/apks/wdb007_app.apk" class="android_download">
+                    <img src="images/button_nor.png" alt="">
+                </a>
+                <a style="display:none" href="https://itunes.apple.com/us/app/%E6%88%91%E7%9A%84%E9%82%A6/id1274942215?l=zh&ls=1&mt=8" class="ios_download">
+                    <img src="images/iosbutton_down.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script>
+        // 获取url所携带参数
+        function GetRequest() {
+
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        Request = GetRequest();
+        var qrStr = Request['qr'];
+        if(qrStr){
+            location.href = 'http://wdb-html.oss-cn-shanghai.aliyuncs.com/sctivity_h5/index.html?qr=' + qrStr;
+        }
+    </script>
+    <script src="js/wechat_share.js"></script>
+</body>
+
+</html>

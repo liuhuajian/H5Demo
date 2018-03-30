@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.project
+node_modules
+npm-debug.log
+views
+bin
+public
+routes
+*.iml
+*.swp
+dist/*

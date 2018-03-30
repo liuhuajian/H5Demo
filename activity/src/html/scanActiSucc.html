@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://flatfull.com/themes/angulr/html/page_signin.html -->
+<html lang="en" class="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <head>
+        <title>活动送礼</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <link rel="icon" href="../img/wechat_icon_2.png">
+        <link rel="stylesheet" href="../css/style.min.css">
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <section class="g-flexview">
+            <div class="g-scrollview">
+                <div id='acti_over'>
+                    <img src="../img/actiOver.png" alt="">
+                    <div>很遗憾，活动已结束</div>
+                </div>
+                <div id='get_succ'>
+                    <img src="../img/paySucc.png" alt="">
+                    <div>月卡领取成功</div>
+                </div>
+                <div id='fail_get'>
+                    <img src="../img/failIcon.png" alt="">
+                    <div>不能重复领取</div>
+                </div>
+                <div id='gotoIndex'>完 成</div>
+            </div>
+        </section>
+        <script src="../js/all.min.js"></script>
+        <script>
+            var Request = new Object();
+            Request = GetRequest();
+            var code = Request['code'];
+            console.log('code', code);
+            if (code == 0) {
+                $('#get_succ').show();
+            } else if (code == 1) {
+                $('#fail_get').show();
+            } else if (code == 2) {
+                $('#acti_over').show();
+            }
+            $('#gotoIndex').click(function () {
+                window.close(); 
+            });
+        </script>
+    </body>
+
+</html>

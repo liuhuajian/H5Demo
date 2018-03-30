@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的邦下载页</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="icon" href="images/wechat_icon_2.png">
+    <link rel="stylesheet" href="css/ydui.css?rev=@@hash"/>
+    <link rel="stylesheet" href="css/demo.css"/>
+    <link rel="stylesheet" href="css/wechat_pc.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/ydui.flexible.js"></script>
+</head>
+<body>
+<!--头部-->
+    <div class="head">
+        <div class="pc-head">
+            <img class="pc-logo" src="images/wechat_icon_2.png" alt="">
+            <span class="pc-txt">我的邦童书馆</span>
+        </div>
+    </div>
+    <div class="pc-img">
+        <img class="hand_2" src="images/hand_2@2x.png" alt="">
+        <div class="pc-right">
+            <p>我的邦</p>
+            <p>智慧童书平台</p>
+            <a class="android-btn" href="javascript:void(0)">
+                <img src="images/androidbutton_nor@2x.png" alt="">
+            </a>
+            <a class="ios-btn" href="javascript:void(0)">
+                <img src="images/iosbutton_nor@2x.png" alt="">
+            </a>
+            <a class="wechat-btn" href="javascript:void(0)">
+                <img class="wechat-btn-code" src="images/wechat_nor@2x.png" alt="">
+                <img class="wechat_code" src="images/wechat_code.jpg" alt="">
+            </a>
+        </div>
+    </div>
+<script>
+    $(".android-btn").click(function(){
+        $(this).children().attr("src","images/android_button_down@2x.png");
+        location.href="https://img.wdb007.com/user_head/app-baidu-debug.apk";
+    });
+    $(".ios-btn").click(function(){
+        $(this).children().attr("src","images/iosbutton_down@2x.png");
+        location.href="https://itunes.apple.com/us/app/%E6%88%91%E7%9A%84%E9%82%A6/id1274942215?l=zh&ls=1&mt=8";
+    });
+    $(".wechat-btn-code").mouseenter(function(){
+        $(this).attr("src","images/wechat_down@2x.png");
+        $(this).siblings(".wechat_code").fadeToggle("slow", "linear");
+    });
+</script>
+</body>
+</html>

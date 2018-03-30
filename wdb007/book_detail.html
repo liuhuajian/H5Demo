@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="./css/ydui.css?rev=@@hash"/>
+    <link rel="stylesheet" href="./css/demo.css"/>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/book_detail.css">
+    <script src="./js/ydui.flexible.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <script>
+	var agent = navigator.userAgent;
+	if (agent.indexOf('Android') > -1)> -1) {
+        if (agent.indexOf('Android 8.') == -1) {
+            document.title = '图书详情';
+        }
+    }
+
+    wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: "wxe6948d920a0873f5",
+        timestamp: "{$signPackage['timestamp']}",
+        nonceStr: "{$signPackage['nonceStr']}",
+        signature: "{$signPackage['signature']}",
+        jsApiList: [
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline',
+        ]
+    });
+
+    </script>
+</head>
+<body>
+<section class="g-flexview">
+
+    <div class="g-scrollview">
+        <div style="margin-bottom:5px; background-color:#fff">
+            <img src="./images/default_pic.png" alt="" class="title-img">
+        </div>
+        <!--书柜位置信息-->
+        <div class="bookshelf-position">
+            <div class="position-left">
+                <i class="icon-location"></i>
+                <span class="address"></span>
+            </div>
+            <div class="position-right">
+                距您<span class="distance"></span>左右
+            </div>
+        </div>
+        <!--用户头像-->
+        <div class="user-img">
+        </div>
+        <!--书籍简介-->
+        <div class="book-info-txt"><img src="./images/icon_01.png" alt="">书籍简介</div>
+        <div class="book-info">
+            <div class="book-info-container">
+                <div class="book-info-detail">
+                    <span class="book-detail-item" style="width:100%">
+                        <span id="info-bookname" style="font-weight: 700;font-size:.3rem;color:#000;"></span>
+                    </span>
+                </div>
+                <div class="book-info-detail">
+                    <span class="book-detail-item" style="width:100%;color:#c0c0c0;">
+                        作者：<span id="info-author"></span>
+                    </span>
+                </div>
+                <div class="book-info-detail">
+                    <span class="book-detail-item">
+                        出版社：<span id="pub"></span>
+                    </span>
+                    <span class="book-detail-item">
+                        ISBN：<span id="bookIsbn"></span>
+                    </span>
+                </div>
+                <div class="book-info-detail">
+                    <span class="book-detail-item">
+                        出版日期：<span id="publish-date"></span>
+                    </span>
+                    <span class="book-detail-item">
+                        书柜编号：<span id="info-bookshelf"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--图书详情-->
+        <div class="book-info-txt" id="book_detail_text"><img src="./images/icon_03.png" alt="">书籍详情</div>
+        <div class="book-detail-img" id="author-recommend">
+            <img class="book-img-url-01" src="./images/xqy-02.png" alt="">
+            <div class="author-recommend">
+                <!--<div>-->
+                    <!--&nbsp;&nbsp;卡券签名和JSSDK的签名完全独立，两者的算法和意义完全不同，请不要混淆。JSSDK的签名是使用所有JS接口<br/>-->
+                    <!--&nbsp;&nbsp;都需要走的一层鉴权，用以标识调用者的身份，和卡券本身并无关系。其次，卡券的签名考虑到协议的扩展性和简单的防数据擅改，设计了一套独立的签名协议。<br/>-->
+                    <!--&nbsp;&nbsp;另外由于历史原因，卡券的JS接口先于JSSDK出现，当时的JSAPI并没有鉴权体系，所以在卡券的签名里也加上了appsecret/api_ticket这些身份信息，希望开发者理解。<br/>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="book-detail-img" id="book-intro">
+            <img class="book-img-url-01" src="./images/xqy-03.png" alt="">
+            <div class="book-intro-container">
+            </div>
+        </div>
+        <div class="book-detail-img" id="book-picture">
+            <img class="book-img-url-01" src="./images/xqy-04.png" alt="">
+            <div class="book-picture">
+            </div>
+        </div>
+        <!--用户评价-->
+        <div class="user-assess-list">
+            <div class="assess-count">
+                <span class="assess-left assess-title"><img src="./images/icon_02.png" alt=""><span class="count"></span></span>
+                <a class="assess-right" href="h5://BookDetail/toAllComments">查看全部 &gt</a>
+            </div>
+            <div class="assess-detail">
+            </div>
+        </div>
+    </div>
+</section>
+<div style="width:100%;height:20px;"></div>
+<script src="./js/jquery-2.1.4.min.js"></script>
+<script src="./js/ydui.js"></script>
+<script src="./js/hostname.js"></script>
+<script src="./js/book_detail.js"></script>
+<script>(!YDUI.device.isMobile && navigator.userAgent.indexOf('Firefox') >= 0) && YDUI.dialog.alert('PC端请使用谷歌内核浏览器查看！')</script>
+<script>
+    !function () {
+        $('.m-list').find('img').lazyLoad({binder: '.g-scrollview'});
+    }();
+</script>
+</body>
+</html>

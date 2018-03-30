@@ -1,0 +1,47 @@
+body{
+    line-height:normal;
+}
+.demo-license-txt{
+    padding:.35rem .25rem 0;
+    font-size:.3rem;
+}
+.first-title{
+    padding:.15rem 0;
+}
+.second-title{
+    padding-bottom:.1rem;
+}
+.borrowBook-title{
+    padding-top:.15rem;
+    font-weight:bold;
+}
+.title-style{
+    margin-bottom: .2rem;
+}
+.g-scrollview .panel-group .panel-head{
+    color:#7d7d7d;
+    font-size:16px;
+    line-height:26px;
+    background:#fff;
+    padding: 10px 15px;
+}
+
+.panel_img{
+    display:inline-block;
+    vertical-align: middle;
+    width:26px;
+    height:26px;
+}
+
+.muti-body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.muti-text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+

@@ -1,0 +1,21 @@
+body{
+    background:#f17901;
+    height:100%;
+    overflow: hidden;
+}
+.g-flexview .head-text{
+    margin-top:2.7rem;
+    line-height:1rem;
+    letter-spacing: .03rem;
+    font-size:1.2rem;
+    text-align:center;
+    color:#fff40e;
+}
+.g-flexview .code-container{
+    margin-top:1.8rem;
+    width:100%;
+}
+.g-flexview .code-container img{
+    max-width:86%;
+    margin:0 auto;
+}

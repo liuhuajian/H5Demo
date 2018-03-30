@@ -1,0 +1,91 @@
+#acti_over,#get_succ,#fail_get,#coupon_succ,#coupon_over{
+    width:100%;
+    margin-top:50px;
+    display:none;
+}
+#acti_over img,#get_succ img,#fail_get img,#coupon_succ>img,#coupon_over>img{
+    width:80px;
+    height:80px;
+    margin:0 auto;
+}
+#acti_over div,#fail_get div{
+    text-align:center;
+    color:#cbcbcb;
+    font-size:18px;
+    line-height:50px;
+    letter-spacing: 1px;
+}
+#get_succ div{
+    text-align:center;
+    color:#f8b431;
+    font-size:14px;
+    line-height:35px;
+    letter-spacing: 1px;
+}
+#gotoIndex{
+    width:80%;
+    line-height:36px;
+    text-align:center;
+    margin:50px auto 0;
+    background: #ffb312;
+    color:#fff;
+    font-size:14px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow:0px 0px 10px 0.5px #ffb312;
+}
+
+#coupon_succ div,#coupon_over div{
+    font-size:16px;
+    font-family:SIL-Hei-Med-Jian;
+    line-height:50px;
+    text-align:center;
+}
+#coupon_succ div{
+    color:rgba(255,179,18,1);
+}
+#coupon_over div{
+    color:rgba(189,189,189,1);
+}
+
+.coupon_info{
+    width:80%;
+    margin-left:10%;
+    margin-top:15px;
+    height:160px;
+    position: relative;
+}
+
+.coupon_info img{
+    width:100%;
+    height:160px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.coupon_detail_txt{
+    width:80%;
+    margin-left:10%;
+    text-align:center;
+    font-size:16px;
+    font-family:SIL-Hei-Med-Jian;
+    color:rgba(255,179,18,1);
+    line-height:30px;
+    position: absolute;
+    top:70px;
+    left:0;
+    z-index:999;
+}
+
+.testQrcode{
+    width:100%;
+    height:150px;
+    text-align:center;
+    margin-top:15px;
+}
+.testQrcode img{
+    width:150px;
+    height:150px;
+    margin:0 auto;
+}

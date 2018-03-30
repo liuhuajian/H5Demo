@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://flatfull.com/themes/angulr/html/page_signin.html -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>活动送礼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap-grid.min.css" rel="stylesheet"> -->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="icon" href="img/wechat_icon_2.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <section class="g-flexview">
+        <div class="g-scrollview">
+            <div class='page_banner'>
+                <img class='banner_img' src="img/scanActivity.png" alt="">
+            </div>
+            <div class="logo_container">
+                <img src="img/wechat_icon_2.png" />
+                <span>让孩子爱上阅读</span>
+            </div>
+            <div class="form_container">
+
+                <div>
+                    <img src="img/phoneIcon.png" class="phone_img">
+                    <input type="number" name="user_phone" id="user_phone" placeholder='请输入手机号' focus='true' placeholder-class='placeholder_font'/>
+                </div>
+                <div class="code_container">
+                    <img src="img/securityCodeIcon.png" class="code_img"/>
+                    <div class="code_container_02">
+                        <input type="text" name="user_code" id="user_code" placeholder='请输入验证码' placeholder-class='placeholder_font' />
+                        <div class="send_code_btn" id='send_code_btn'>获取验证码</div>
+                        <div class="time_down_btn" style="display:none" id='J_resetCode'><span id="J_second"></span>秒</div>
+                    </div>
+                </div>
+                <div class='err_info'></div>
+                <button type="button" id="check_btn" class='btn"'>登 录</button>
+
+            </div>
+        </div>
+    </section>
+    <script src="js/all.min.js"></script>
+</body>
+</html>

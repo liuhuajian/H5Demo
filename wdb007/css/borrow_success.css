@@ -1,0 +1,76 @@
+.g-flexview .text-container{
+    width:100%;
+    background: url(../images/nav.png) center 0 no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+}
+.g-flexview  .borrow-succe-txt{
+    text-align:center;
+    line-height:.8rem;
+    color:#fff;
+    font-size:.45rem;
+    letter-spacing: .01rem;
+    padding:.35rem 0 .32rem;
+}
+.text-container .record-count{
+    width:100%;
+    padding:0 .2rem;
+}
+.text-container .record-count .borrow-count-container,.text-container .record-count .return-count-container{
+    width:44%;
+    text-align:center;
+    color:#fff;
+    font-size:.36rem;
+    display:inline-block;
+    vertical-align: top;
+}
+.g-flexview .text-container>p{
+    width:100%;
+    text-align:center;
+    font-size:.28rem;
+    color:#fff;
+    padding:.35rem 0;
+    letter-spacing: .01rem;
+}
+.g-flexview .book-list{
+    width:100%;
+}
+.g-flexview .book-list .book-list-item{
+    display:block;
+    background:#fff;
+    width:100%;
+    margin-top:.1rem;
+    min-height:2.3rem;
+}
+.g-flexview .book-list .book-list-item .book-list-left{
+    display:inline-block;
+    max-width:28%;
+    vertical-align: top;
+    padding-top:.2rem;
+}
+.g-flexview .book-list .book-list-item .book-list-right{
+    display:inline-block;
+    width:70%;
+    padding:.2rem;
+    vertical-align: top;
+}
+.g-flexview .book-list .book-list-item .book-list-right .book-name{
+    color:#000;
+    font-size:.39rem;
+    letter-spacing: .02rem;
+}
+.g-flexview .book-list .book-list-item .book-list-right .author-name{
+    margin-top:.1rem;
+    font-size:.3rem;
+    letter-spacing: .01rem;
+}
+.g-flexview .book-list .book-list-item .book-list-right .book-isbn-container{
+    margin-top:.1rem;
+    font-size: .27rem;
+}
+.g-flexview .book-list .book-list-item .book-list-right .borrow-book-btn{
+    border:none;
+    line-height: .7rem;
+}
